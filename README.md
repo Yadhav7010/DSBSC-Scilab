@@ -47,9 +47,59 @@ Model Waveform
 
 <img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
 
-Program
+Program```clc;
+clear;
+close;
 
+// Parameters
+ac = 181;          // Carrier amplitude
+Am = 18.1;        // Message amplitude
+fc = 6460;       // Carrier frequency
+fm = 646;        // Message frequency
+fs = 45000;      // Sampling frequency
+
+// Time axis
+t = 0:1/fs:2/fm;
+
+// Angular frequencies
+wc = 2*%pi*fc;
+wm = 2*%pi*fm;
+
+// 1. Message Signal
+m = Am * sin(wm*t);
+
+// 2. Carrier Signal
+c = ac * sin(wc*t);
+
+// 3. DSB-SC Signal
+dsb_sc = m .* sin(wc*t);
+
+// 4. Conventional AM Signal
+am = (ac + m) .* sin(wc*t);
+
+// Plotting
+subplot(4,1,1);
+plot(t, m);
+xtitle("Message Signal");
+xgrid();
+
+subplot(4,1,2);
+plot(t, c);
+xtitle("Carrier Signal");
+xgrid();
+
+subplot(4,1,3);
+plot(t, dsb_sc);
+xtitle("DSB-SC Signal");
+xgrid();
+
+subplot(4,1,4);
+plot(t, am);
+xtitle("Conventional AM Signal");
+xgrid();
+```
 Output Graph
+<img width="1919" height="1199" alt="Screenshot 2026-03-22 151421" src="https://github.com/user-attachments/assets/1c2b6406-e0d9-42c5-81b5-afcb519763bf" />
 
 
 Tablular Column
