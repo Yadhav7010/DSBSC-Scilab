@@ -1,62 +1,77 @@
 # DSBSC
 
+EX NO: 2    DSB-SC-AM MODULATOR AND DEMODULATOR
 
-EX NO: 2	DSB-SC-AM MODULATOR AND DEMODULATOR
+---
 
-AIM:
+## AIM:
+To write a program to perform DSBSC modulation and demodulation using SCILAB and study its spectral characteristics.
 
-To write a program to perform DSBSC modulation and demodulation using SCI LAB and study its spectral characteristics
+---
 
-EQUIPMENTS REQUIRED
+## EQUIPMENTS REQUIRED
+- Computer with i3 Processor  
+- SCI LAB  
 
-•	Computer with i3 Processor
-•	SCI LAB
+---
 
 Note: Keep all the switch faults in off position
 
-Algorithm:
+---
 
-1.	Define Parameters:
-•	Fs: Sampling frequency.
-•	T: Duration of the signal.
-•	Fc: Carrier frequency.
-•	Fm: Frequency of the message signal.
-•	Amplitude: Maximum amplitude of the message signal.
-2.	Generate Signals:
-•	Message Signal: A sinusoidal signal that will be modulated.
-•	Carrier Signal: A high-frequency sinusoidal signal used for modulation.
-3.	DSBSC Modulation:
-•	Modulated Signal: Multiply the message signal by the carrier signal to produce the DSBSC signal.
-4.	DSBSC Demodulation:
-•	Multiplication: Multiply the modulated signal by the carrier signal to get the product of the message signal with itself (i.e., the original message signal plus high-frequency components).
-•	Low-pass Filtering: Apply a Butterworth low-pass filter to remove the high- frequency components and recover the original message signal.
-5.	Visualization:
-Plot the message signal, carrier signal, DSBSC modulated signal, and the recovered signal after demodulation.
-PROCEDURE
+## ALGORITHM:
 
-•	Refer Algorithms and write code for the experiment.
-•	Open SCILAB in System
-•	Type your code in New Editor
-•	Save the file
- 
-•	Execute the code
-•	If any Error, correct it in code and execute again
-•	Verify the generated waveform using Tabulation and Model Waveform
+1. Define Parameters:
+   - Fs: Sampling frequency  
+   - T: Duration of the signal  
+   - Fc: Carrier frequency  
+   - Fm: Frequency of the message signal  
+   - Amplitude: Maximum amplitude of the message signal  
 
-Model Waveform
+2. Generate Signals:
+   - Message Signal: Sinusoidal signal  
+   - Carrier Signal: High-frequency sinusoidal signal  
 
-<img width="703" height="679" alt="image" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
+3. DSBSC Modulation:
+   - Multiply message signal with carrier signal  
 
-Program```clc;
+4. DSBSC Demodulation:
+   - Multiply modulated signal with carrier  
+   - Apply low-pass filter to recover message  
+
+5. Visualization:
+   Plot all signals  
+
+---
+
+## PROCEDURE
+- Refer Algorithms and write code  
+- Open SCILAB in System  
+- Type code in New Editor  
+- Save the file  
+- Execute the code  
+- If any error, correct and execute again  
+- Verify waveform  
+
+---
+
+## MODEL WAVEFORM
+<img width="703" height="679" src="https://github.com/user-attachments/assets/e7c7c7f8-ccf2-41ac-b1f3-325989941a6f" />
+
+---
+
+## PROGRAM
+```scilab
+clc;
 clear;
 close;
 
 // Parameters
 ac = 181;          // Carrier amplitude
-Am = 18.1;        // Message amplitude
-fc = 6460;       // Carrier frequency
-fm = 646;        // Message frequency
-fs = 45000;      // Sampling frequency
+Am = 18.1;         // Message amplitude
+fc = 6460;         // Carrier frequency
+fm = 646;          // Message frequency
+fs = 45000;        // Sampling frequency
 
 // Time axis
 t = 0:1/fs:2/fm;
@@ -98,14 +113,18 @@ plot(t, am);
 xtitle("Conventional AM Signal");
 xgrid();
 ```
-Output Graph
-<img width="1919" height="1199" alt="Screenshot 2026-03-22 151421" src="https://github.com/user-attachments/assets/1c2b6406-e0d9-42c5-81b5-afcb519763bf" />
 
+---
 
-Tablular Column
+## OUTPUT GRAPH
+<img width="1919" height="1199" src="https://github.com/user-attachments/assets/1c2b6406-e0d9-42c5-81b5-afcb519763bf" />
 
+---
 
-Result
+## TABULAR COLUMN
+<img width="1280" height="975" src="https://github.com/user-attachments/assets/1ee17d2d-fd2a-4d32-b948-fb2115859b14" />
 
+---
+
+## RESULT
 Thus the DSB-SC-AM Modulation and Demodulation is generated.
-
