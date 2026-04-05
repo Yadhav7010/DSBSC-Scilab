@@ -128,3 +128,4 @@ xgrid();
 
 ## RESULT
 Thus the DSB-SC-AM Modulation and Demodulation is generated.
+<img width="1080" height="331" alt="image" src="https://github.com/user-attachments/assets/385e6e7b-9635-414b-8956-52d6f9927cd3" />
