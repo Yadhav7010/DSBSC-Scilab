@@ -123,6 +123,8 @@ xgrid();
 
 ## TABULAR COLUMN
 <img width="1280" height="975" src="https://github.com/user-attachments/assets/1ee17d2d-fd2a-4d32-b948-fb2115859b14" />
+<img width="1080" height="458" alt="image" src="https://github.com/user-attachments/assets/bdf49745-c7e0-4229-a906-12e8701a1ddc" />
+
 
 ---
 
